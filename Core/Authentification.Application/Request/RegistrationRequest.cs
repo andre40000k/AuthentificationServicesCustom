@@ -1,13 +1,12 @@
-﻿namespace Authentification.Domain.Entities
+﻿using Authentification.Domain.Common;
+
+namespace Authentification.Application.Request
 {
-    public class User
+    public class RegistrationRequest : BaseRequest
     {
-        public Guid UserId { get; set; }
         public string UserFirstName { get; set; }
         public string UserSecondName { get; set; }
         public string UserEmail { get; set; }
         public string UserPassword { get; set; }
-
-        public RefreshToken RefreshToken { get; set; }
     }
 }

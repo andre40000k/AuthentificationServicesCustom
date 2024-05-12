@@ -1,7 +1,6 @@
 ﻿using Authentification.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace Authentification.Data.Configuration
 {
@@ -15,7 +14,6 @@ namespace Authentification.Data.Configuration
             builder.Property(p => p.UserSecondName);
             builder.Property(p => p.UserEmail).IsRequired();
             builder.Property(p => p.UserPassword).IsRequired();
-            builder.Property(p => p.RefreshToken).IsRequired();
         }
     }
 }

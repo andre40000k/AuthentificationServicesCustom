@@ -23,7 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\Authentification.Application\Authentification.Application.csproj" />
     <ProjectReference Include="..\..\Core\Authentification.Domain\Authentification.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

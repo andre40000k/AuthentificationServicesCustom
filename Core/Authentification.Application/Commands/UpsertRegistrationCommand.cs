@@ -1,13 +1,10 @@
-﻿namespace Authentification.Domain.Entities
+﻿namespace Authentification.Application.Commands
 {
-    public class User
+    public class UpsertRegistrationCommand
     {
-        public Guid UserId { get; set; }
         public string UserFirstName { get; set; }
         public string UserSecondName { get; set; }
         public string UserEmail { get; set; }
         public string UserPassword { get; set; }
-
-        public RefreshToken RefreshToken { get; set; }
     }
 }

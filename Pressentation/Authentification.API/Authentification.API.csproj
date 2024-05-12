@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\Authentification.Application\Authentification.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Authentification.Data\Authentification.Data.csproj" />
   </ItemGroup>

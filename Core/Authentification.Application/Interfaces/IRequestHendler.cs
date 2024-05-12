@@ -7,6 +7,6 @@
 
     public interface IRequestHendler<in IRequest, IRespons>
     {
-        Task<IRespons> HendlerAsynk(IRequest request, CancellationToken cancellationToken = default);
+        Task<IRespons> HendlerAsync(IRequest request, CancellationToken cancellationToken = default);
     }
 }
