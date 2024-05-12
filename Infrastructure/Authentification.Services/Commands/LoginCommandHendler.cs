@@ -10,7 +10,7 @@ using System.Security.Claims;
 
 namespace Authentification.Services.Commands
 {
-    public class LoginCommandHendler : TokenGenerator, IRequestHendler<LoginCommand, LoginResponse>
+    public class LoginCommandHendler : BaseTokenApi, IRequestHendler<LoginCommand, LoginResponse>
     {
         private readonly IRepositories _repositories;
         private readonly IConfiguration _configuration;
@@ -32,7 +32,7 @@ namespace Authentification.Services.Commands
 
             var authClaims = new List<Claim>
             {
-               new Claim(ClaimTypes.Name, currentUser.UserEmail),
+               new Claim(ClaimTypes.NameIdentifier, Convert.ToString(currentUser.UserId)),
                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
 

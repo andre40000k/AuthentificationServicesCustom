@@ -23,5 +23,22 @@ namespace Authentification.Data.Repository
             return await _context.Users
                 .FirstOrDefaultAsync(e => e.UserEmail == email);
         }
+
+        public async Task<RefreshToken?> GetTokenByUserIdAsync(Guid userId)
+        {
+            return await _context.RefreshTokens.FirstOrDefaultAsync(e => e.UserId == userId);
+        }
+
+        public async Task UpdateEntityToDbAsync<TObject>(TObject objects)
+        {
+            _context.Update(objects);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteTokenAsync<TEntity>(TEntity entity)
+        {
+            _context.Remove(entity);
+            await _context.SaveChangesAsync();
+        }
     }
 }
